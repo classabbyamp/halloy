@@ -3,6 +3,8 @@
 Added:
 
 - <kbd>ctrl</kbd> + <kbd>,</kbd> now opens the config file (<kbd>⌘</kbd> + <kbd>,</kbd> on macOs)
+- `buffer.server_messages.away` setting to control when automated away messages are shown
+- `buffer.server_messages.away` theme setting to control how automated away messages appear
 
 Fixed:
 
@@ -17,6 +19,7 @@ Thanks:
 
 - Contributions: @furudean, @omentic, @KaiKorla
 - Bug reports: sebbu, @whitequark, @SnoopJ, esden, @miyukoc
+- Feature requests: @omentic
 
 # 2026.5 (2026-03-21)
 
