@@ -3,6 +3,7 @@
 Added:
 
 - <kbd>ctrl</kbd> + <kbd>,</kbd> now opens the config file (<kbd>⌘</kbd> + <kbd>,</kbd> on macOs)
+- Per-server `typing` settings
 
 Fixed:
 
@@ -13,6 +14,10 @@ Fixed:
 - Keyboard shortcuts now work in popped out buffer windows, including command bar shortcuts
 - IRC URIs now handle bracketed IPv6 hosts and percent-encoded channel targets correctly
 - `typing` settings for buffers could get in a stuck state without any way to control them
+
+Changed:
+
+- Move `typing` from `buffer.channel.typing` to `buffer.typing` to indicate that it applies to queries as well as channels
 
 Thanks:
 
