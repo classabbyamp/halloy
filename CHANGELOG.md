@@ -3,7 +3,7 @@
 Added:
 
 - <kbd>ctrl</kbd> + <kbd>,</kbd> now opens the config file (<kbd>⌘</kbd> + <kbd>,</kbd> on macOs)
-- Per-server `typing` settings
+- Per-server `typing` settings (`servers.<name>.typing`)
 
 Fixed:
 
@@ -17,7 +17,7 @@ Fixed:
 
 Changed:
 
-- Move `typing` from `buffer.channel.typing` to `buffer.typing` to indicate that it applies to queries as well as channels
+- Move `typing` settings from `buffer.channel.typing` to `buffer.typing` to indicate that it applies to queries as well as channels
 
 Thanks:
 
