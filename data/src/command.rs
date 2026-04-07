@@ -845,7 +845,10 @@ fn parse_command(
                         isupport::get_mode_limit_or_default(isupport);
 
                     if let Some(mode_string) = mode_string {
-                        if mode_string == "+" || mode_string == "-" {
+                        if mode_string == "+"
+                            || mode_string == "-"
+                            || mode_string == "="
+                        {
                             Err(Error::NoModeString)
                         } else {
                             let mode_string_regex = if proto::is_channel(
@@ -860,7 +863,7 @@ fn parse_command(
                                     isupport::get_prefix_or_default(isupport);
 
                                 let mut channel_modes_regex =
-                                    String::from(r"^((\+|\-)[");
+                                    String::from(r"^((\+|\-|\=)[");
                                 for chanmode in chanmodes {
                                     channel_modes_regex +=
                                         chanmode.modes.as_ref();
@@ -880,7 +883,7 @@ fn parse_command(
                                 channel_modes_regex += r")+$";
 
                                 Regex::new(&channel_modes_regex).unwrap_or(
-                                    Regex::new(r"^((\+|\-)[A-Za-z]+)+$")
+                                    Regex::new(r"^((\+|\-|\=)[A-Za-z]+)+$")
                                         .unwrap(),
                                 )
                             } else {

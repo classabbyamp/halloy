@@ -494,7 +494,7 @@ impl Commands {
                 }
                 "MODE" => {
                     if let Some(target) = rest.split_ascii_whitespace().nth(1)
-                        && target.starts_with(['+', '-'])
+                        && target.starts_with(['+', '-', '='])
                         && let Some(target) = command.args.get_mut(0)
                     {
                         target.kind.skip();
@@ -531,7 +531,7 @@ impl Commands {
                     let subcmd = if command.title != "MODE" {
                         format!("{} {}", command.title, subcmd).to_lowercase()
                     } else {
-                        let text = if subcmd.starts_with(['+', '-']) {
+                        let text = if subcmd.starts_with(['+', '-', '=']) {
                             if let Some(target) = current_target {
                                 match target {
                                     Target::Channel(_) => "channel",
